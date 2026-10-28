@@ -1,0 +1,21 @@
+# Credentials and personal records
+.env*
+!.env.example
+data/
+logs/
+outputs/
+archive/
+*.xlsx
+Calories_Alienergy.jpg
+references/*
+!references/Background.jpg
+assets/training-hero.jpg
+scripts/*.plist
+.garmin-sync.lock
+.garmin-extended.lock
+
+# Runtime files
+__pycache__/
+*.pyc
+.DS_Store
+*.sqlite3*
