@@ -63,7 +63,7 @@ python3 scripts/install_daily_sync.py
 launchctl print gui/$(id -u)/com.raymond.garmin-sync
 ```
 
-The LaunchAgent runs immediately on installation and daily at 22:00 Mac local time. It persists across restarts. If the Mac is asleep at the scheduled time, launchd normally runs the missed job after waking; it cannot fetch data while powered off, logged out or offline. Garmin must receive your watch data first. An expired API key must be replaced locally.
+The LaunchAgent runs immediately on installation and twice daily at 08:00 and 22:00 Mac local time. The morning run retrieves overnight recovery data; the evening run retrieves the day's training. It persists across restarts. If the Mac is asleep at a scheduled time, launchd normally runs the missed job after waking; it cannot fetch data while powered off, logged out or offline. Garmin must receive your watch data first. An expired API key must be replaced locally.
 
 The installed job invokes `scripts/sync_history.py`, so updates to that script are used without reinstalling the schedule. Moving this project or changing the desired time requires reinstalling it.
 

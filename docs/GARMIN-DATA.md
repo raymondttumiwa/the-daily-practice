@@ -36,7 +36,7 @@ Original FIT/GPX files and route coordinates are not downloaded. Identity, locat
 
 ## Sync behavior
 
-`python3 scripts/sync_history.py` includes extra metrics, caches older successful detail downloads, refreshes the recent seven days and retries transient failures. The same command is used by the nightly schedule. `--full` requests a complete refresh. `python3 scripts/sync_available.py --force` forces only the expanded collection.
+`python3 scripts/sync_history.py` includes extra metrics, caches older successful detail downloads, refreshes the recent seven days and retries transient failures. The same command is scheduled at 08:00 and 22:00 daily, Mac local time. `--full` requests a complete refresh. `python3 scripts/sync_available.py --force` forces only the expanded collection.
 
 Failures are listed in the history page and `extended/manifest.json`. Previously downloaded data is retained on request failures; successful empty responses remain empty. Older 400/403/404 responses are cached until a forced request. Network failures and missing device data cannot be fixed by estimating a value.
 

@@ -36,7 +36,7 @@ Personal settings belong in the ignored `data/coach/profile.json`, and calendar 
 python3 scripts/install_daily_sync.py
 ```
 
-On macOS, this installs a daily sync at 22:00 Mac local time. It refreshes activities, catches up after offline days, refreshes recent recovery and extra metrics, imports the database, creates a daily backup and rebuilds your personal page. Older successful detail downloads are reused. Failed requests are reported; earlier readings are retained on failure.
+On macOS, this installs two daily syncs at 08:00 and 22:00 Mac local time. The morning run retrieves overnight recovery data; the evening run retrieves the day's training. Each run refreshes activities, catches up after offline days, refreshes recent recovery and extra metrics, imports the database, creates a daily backup and rebuilds your personal page. Older successful detail downloads are reused. Failed requests are reported; earlier readings are retained on failure.
 
 The Mac must be logged in with network access, and your watch must have synced with Garmin. Refresh the page to see a completed sync. This local schedule does not upload your personal records.
 

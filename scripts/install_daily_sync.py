@@ -1,4 +1,4 @@
-"""Install a macOS LaunchAgent for daily Garmin sync at 22:00 local time."""
+"""Install a macOS LaunchAgent for Garmin sync at 08:00 and 22:00 daily."""
 import os
 from pathlib import Path
 import plistlib
@@ -15,7 +15,7 @@ config = {
     'Label': LABEL,
     'ProgramArguments': [python, '-u', str(ROOT / 'scripts/sync_history.py')],
     'WorkingDirectory': str(ROOT),
-    'StartCalendarInterval': {'Hour': 22, 'Minute': 0},
+    'StartCalendarInterval': [{'Hour': 8, 'Minute': 0}, {'Hour': 22, 'Minute': 0}],
     'RunAtLoad': True,
     'StandardOutPath': str(logs / 'garmin-sync.log'),
     'StandardErrorPath': str(logs / 'garmin-sync-error.log'),
@@ -40,5 +40,5 @@ if result.returncode:
 check = subprocess.run(['launchctl', 'print', f'{domain}/{LABEL}'], capture_output=True, text=True)
 if check.returncode:
     raise SystemExit('Activation could not be verified.')
-print('Daily Garmin sync installed and verified: 22:00 local Mac time, plus an immediate sync on loading.')
+print('Garmin sync installed and verified: 08:00 and 22:00 daily, local Mac time, plus an immediate sync on loading.')
 print('Log:', logs / 'garmin-sync.log')
