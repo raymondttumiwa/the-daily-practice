@@ -13,7 +13,7 @@ FILES += ['scripts/' + name for name in (
     'build_dashboard.py', 'check_garmin.py', 'coach_data.py', 'coach_server.py', 'coach_ui.py',
     'demo_data.py', 'history_dashboard.py', 'install_daily_sync.py', 'prepare_publish.py',
     'sync_available.py', 'sync_garmin.py', 'sync_history.py', 'training_store.py')]
-FILES += ['assets/' + name for name in ('coach.js', 'dashboard.css', 'desk.html', 'history.html', 'history.js')]
+FILES += ['assets/' + name for name in ('coach.js', 'dashboard.css', 'desk.html', 'history.html', 'history.js', 'Favicon.png', 'brand-logo.png')]
 FILES += ['tests/' + name for name in ('test_store.py', 'test_sync.py', 'dashboard.mjs')]
 
 

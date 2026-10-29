@@ -19,6 +19,7 @@ Keep the active project together. Edit source files, then rebuild; edits to gene
 | `scripts/build_dashboard.py`, `coach_ui.py`, `history_dashboard.py`, `demo_data.py` | Build private HTML or a fictional demo. |
 | `assets/desk.html`, `history.html`, `coach.js`, `history.js`, `dashboard.css` | Editable page templates, interactions and styling. |
 | `references/Background.jpg` | Active background, embedded in the page at build time. |
+| `assets/Favicon.png`, `assets/brand-logo.png` | Supplied monogram and optimized display version, used for the navigation logo and browser icon. |
 | `scripts/install_daily_sync.py` | Install or repair the local schedule. |
 | `scripts/prepare_publish.py` | Create a clean code and fictional-demo bundle for GitHub. |
 | `tests/`, `.github/workflows/pages.yml` | Validation and automated demo deployment. |
