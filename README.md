@@ -1,5 +1,7 @@
 # The Daily Practice
 
+[Live demo](https://raymondttumiwa.github.io/the-daily-practice/) · [GitHub repository](https://github.com/raymondttumiwa/the-daily-practice)
+
 A simple training desk for workouts, recovery, meals and a calendar. Python builds a standalone page; no JavaScript framework, package installation, or external AI service is required.
 
 The interface uses a full-page photographic background, translucent panels, restrained orange accents and expandable workspaces. Your daily session and four summary cards stay visible; detailed logs and history open when needed.
